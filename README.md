@@ -1,5 +1,5 @@
 # is-monkey
-is-monkey is an innovative library to determine whether a string is equal to monkey.
+is-monkey is an innovative API to determine whether a string is equal to monkey.
 
 Example use in python:
 
