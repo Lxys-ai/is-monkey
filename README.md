@@ -1,6 +1,4 @@
 # is-monkey
+is-monkey is an innovative API to determine whether a string is equal to monkey.
 
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
-
-is-monkey is an innovative library to determine whether a string is equal to monkey.
+An example application can be found in monkey.py.
