@@ -1,39 +1,35 @@
 {
-  "_from": "is-monkey",
-  "_id": "is-monkey@1.0.1",
-  "_inBundle": false,
-  "_integrity": "sha512-f35N73fta+yqZGK2Nd+cBraCE+Yx0IGZ2dVv9SLAofEDjrwWCO/y6zh96VOf4KWNoLqpNIPI8vHRNzeAbgtB5Q==",
-  "_location": "/is-monkey",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "is-monkey",
-    "name": "is-monkey",
-    "escapedName": "is-monkey",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/is-monkey/-/is-monkey-1.0.1.tgz",
-  "_shasum": "8a2ce5ee9c14baec72c9f46a95e5068fe66ea189",
-  "_spec": "is-monkey",
-  "_where": "C:\\Lex Software\\npm package\\test",
-  "author": {
-    "name": "Lxys"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
   "description": "If you need to know if a string is monkey.",
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "name": "is-monkey",
+  "version": "2.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "bundle": "tsup src/index.ts --dts --format cjs,esm --target es5",
+    "prepublishOnly": "yarn bundle"
   },
-  "version": "1.0.1"
+  "files": [
+    "dist",
+    "readme.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1",
+    "tsup": "^4.6.0",
+    "typescript": "^4.2.2"
+  }
 }
